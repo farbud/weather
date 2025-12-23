@@ -82,7 +82,7 @@ export default function Home() {
         </>
       )}
       {forecast.length > 0 && (
-        <div className="flex gap-4 overflow-x-auto mt-4 pb-2 px-2 sm:flex sm:flex-wrap sm:text-base">
+        <div className="flex flex-wrap gap-4 overflow-x-auto mt-4 pb-2 px-2 sm:flex sm:flex-wrap sm:text-base">
           {forecast.map((f, idx) => (
             <ForecastCard
               key={idx}
