@@ -14,7 +14,7 @@ export default function ForecastCard({
   icon,
 }: ForecastProps) {
   return (
-    <div className="p-4 sm:p-2 bg-white dark:bg-gray-800 rounded-xl shadow text-center w-28 sm:w-24 md:w-32 transform hover:scale-105 transition-transform duration-300">
+    <div className="p-4 sm:p-2 bg-white dark:bg-gray-800 rounded-xl sm:flex shadow text-center w-28 sm:flex-wrap md:w-32 transform hover:scale-105 transition-transform duration-300">
       <p className="font-bold mb-1">{day}</p>
       <img
         src={`https://openweathermap.org/img/wn/${icon}.png`}

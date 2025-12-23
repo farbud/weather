@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import WeatherForm from "@/app/components/WeatherForm";
 import WeatherCard from "@/app/components/WeatherCard";
 import ForecastCard from "@/app/components/ForecastCard";
-import WeatherAnimation from "@/app/components/WeatherAnimation";
 import WeatherSound from "@/app/components/WeatherSound";
 
 interface WeatherData {
@@ -79,12 +78,11 @@ export default function Home() {
             icon={weather.weather[0].icon}
             weatherType={weatherType}
           />
-          <WeatherAnimation type={weatherType} />
           <WeatherSound type={weatherType} />
         </>
       )}
       {forecast.length > 0 && (
-        <div className="flex gap-4 overflow-x-auto mt-4 pb-2 px-2 sm:px-0">
+        <div className="flex gap-4 overflow-x-auto mt-4 pb-2 px-2 sm:flex sm:flex-wrap sm:text-base">
           {forecast.map((f, idx) => (
             <ForecastCard
               key={idx}

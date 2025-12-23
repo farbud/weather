@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 interface WeatherProps {
@@ -31,7 +32,6 @@ export default function WeatherCard({
       className={`p-6 sm:p-4 md:p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300 text-white relative w-full sm:w-80  ${gradient}`}
     >
       <h2 className="text-2xl font-bold mb-2">{city}</h2>
-      // eslint-disable-next-line @next/next/no-img-element
       <img
         src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
         alt={description}
